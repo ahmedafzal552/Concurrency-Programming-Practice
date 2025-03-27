@@ -11,6 +11,14 @@ app.get("/", (req, res) => {
     res.send("Welcome to the Web Server");
 })
 
+app.get("/hello", (req, res) => {
+    res.send("<h1>Hello</h1><p>How are you?</p>");
+})
+
+app.get("/html", (req, res) => {
+    res.sendFile("index.html", {root: __dirname});
+})
+
 
 
 
